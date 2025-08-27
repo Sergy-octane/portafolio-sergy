@@ -1,254 +1,299 @@
 :root {
-    --rosa-fuerte: #FA8FB1;
-    --blanco-roto:#F8F0E5;
-    --gris-oscuro:var#333333;
-
+    --color-primario: #0D6EFD;      /* Azul principal */
+    --color-secundario: #6C757D;    /* Gris moderno */
+    --color-fondo: #F8F9FA;         /* Fondo claro */
+    --color-texto: #212529;         /* Texto principal */
+    --color-exito: #198754;         /* Verde para checks o resaltados */
 }
 
-/* Estilo general */
-body {
-    font-family: 'Ibarra Real Nova', serif;
-     font-size: 18px; /* un poquito más grande */
-    line-height: 1.6; /* mejora la lectura */
+    /* Estilo general */
+    body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
     margin: 0;
-    background-color:var(--rosa-claro);
-    color:var(--gris-oscuro);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
-h1, h2, h3 {
-    color: var(--rosa-fuerte); /* Títulos en rosa fuerte */
-    font-family: 'Poppins', sans-serif; /* Solo títulos */
-}
-
-/* Encabezado */
-header {
-    background-color: #000;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    display: flex;            /* flex para organizar h1 y nav */
-    flex-direction: column;   /* h1 arriba, nav abajo */
-    align-items: center; 
+   h1, h2, h3 {
+    color: var(--color-primario);
+    font-weight: 700;
 }
 
-header h1 {
-    font-size: 3rem;
-    text-align: center;
-    margin-top: 50px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-nav ul li a {
-    color:var(--rosa-claro);            /* color base blanco */
-    text-decoration: none;    /* quita el subrayado */
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: var(--rosa-fuerte);
-    transition: 0.3s;
-}
-
-/* Secciones */
-section {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: auto;
-    text-align:center;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Galería */
-.galeria {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-.galeria img {
-    width: 45%;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.galeria img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-}
-
-/* Footer */
-footer {
-    background-color: #000;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-}
-.foto-circular {
-    width: 250px;        /* tamaño de la foto */
-    height: 250px;       /* igual que el ancho para que sea círculo */
-    border-radius: 50%;  /* hace que sea redonda */
-    object-fit: cover;   /* recorta para que no se deforme */
-    display: block;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* sombra suave */
-    margin: auto;
-    margin-top: -10px;
-}
-.sobre-mi-contenedor {
-    display: flex;
-    align-items: center; /* centra verticalmente la foto con el texto */
-    gap: 30px;           /* espacio entre la foto y el texto */
-    flex-wrap: wrap;     /* para que en pantallas pequeñas se acomode debajo */
-    justify-content: flex-start; /* empuja todo hacia la izquierda */
-    flex-wrap: wrap;          /* se acomoda en móviles */
-    max-width: 100%;             /* ocupa todo el ancho de la página */
-    margin: 0;                   /* quita márgenes automáticos */
-    padding-left: 20px;          /* pequeño espacio desde el borde izquierdo */
-}
-.sobre-mi p {
-    max-width: 600px; /* Limita el ancho del texto para una mejor lectura */
-    text-align: left;
-}
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-#btn-volver-arriba {
-  display: none; /* Oculto por defecto */
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-#btn-volver-arriba:hover {
-  background-color: #555;
-}
-
-/* Media Queries para pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-    /* Ajustes para el encabezado */
+    /* Encabezado */
     header {
-        flex-direction: column;
-        padding: 10px;
+        background-color: #000;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;            /* flex para organizar h1 y nav */
+        flex-direction: column;   /* h1 arriba, nav abajo */
+        align-items: center; 
     }
 
     header h1 {
-        font-size: 2rem;
-        margin-top: 10px;
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 50px;
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
     }
+   nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+    nav ul li a:hover {
+    color: var(--color-primario);
+    transition: 0.3s;
+}
 
-    /* Ajustes para las secciones */
+    /* Secciones */
     section {
-        padding: 20px 10px;
+        padding: 40px 20px;
+        max-width: 900px;
+        margin: auto;
+        text-align:center;
     }
 
-    /* Ajustes para la galería */
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Galería */
     .galeria {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
     }
 
     .galeria img {
-        width: 100%; /* Las imágenes ocupan todo el ancho en móviles */
+        width: 45%;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
     }
-    
-    /* Ajustes para la sección "Sobre mí" */
-    #sobre-mi .sobre-mi-contenido {
-        flex-direction: column;
+
+    .galeria img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Footer */
+    footer {
+        background-color: #000;
+        color: white;
         text-align: center;
+        padding: 15px;
+        margin-top: 30px;
     }
-    
-    #sobre-mi p {
-        text-align: center;
+    .foto-circular {
+        width: 250px;        /* tamaño de la foto */
+        height: 250px;       /* igual que el ancho para que sea círculo */
+        border-radius: 50%;  /* hace que sea redonda */
+        object-fit: cover;   /* recorta para que no se deforme */
+        display: block;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* sombra suave */
+        margin: auto;
+        margin-top: -10px;
     }
+    .sobre-mi-contenedor {
+        display: flex;
+        align-items: center; /* centra verticalmente la foto con el texto */
+        gap: 30px;           /* espacio entre la foto y el texto */
+        flex-wrap: wrap;     /* para que en pantallas pequeñas se acomode debajo */
+        justify-content: flex-start; /* empuja todo hacia la izquierda */
+        flex-wrap: wrap;          /* se acomoda en móviles */
+        max-width: 100%;             /* ocupa todo el ancho de la página */
+        margin: 0;                   /* quita márgenes automáticos */
+        padding-left: 20px;          /* pequeño espacio desde el borde izquierdo */
+    }
+    .sobre-mi p {
+        max-width: 600px; /* Limita el ancho del texto para una mejor lectura */
+        text-align: left;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+
+    #btn-volver-arriba {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    }
+
+    #btn-volver-arriba:hover {
+    background-color: #555;
+    }
+
+    /* Media Queries para pantallas pequeñas (móviles) */
+    @media (max-width: 768px) {
+        /* Ajustes para el encabezado */
+        header {
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        nav ul {
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        /* Ajustes para las secciones */
+        section {
+            padding: 20px 10px;
+        }
+
+        /* Ajustes para la galería */
+        .galeria {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .galeria img {
+            width: 100%; /* Las imágenes ocupan todo el ancho en móviles */
+        }
+        
+        /* Ajustes para la sección "Sobre mí" */
+        #sobre-mi .sobre-mi-contenido {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        #sobre-mi p {
+            text-align: center;
+        }
+    }
+    #servicios {
+    text-align: left; /* que no quede todo centrado */
+    max-width: 800px; /* que no se extienda demasiado */
+    margin: 0 auto;   /* lo centra en la página */
+    padding: 2rem;
+    }
+
+    #servicios h2 {
+    text-align: center; /* título sí centrado */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    }
+
+    #servicios ul {
+    list-style: none; /* quitamos los puntos feos */
+    padding: 0;
+    }
+
+    #servicios li {
+    margin: 1rem 0;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    }
+
+    /* decoramos con un "check" bonito en vez de punto */
+   #servicios li::before {
+    content: "✔";
+    color: var(--color-exito); /* verde elegante */
+    position: absolute;
+    left: 0;
+    top: 0;
 }
-#servicios {
-  text-align: left; /* que no quede todo centrado */
-  max-width: 800px; /* que no se extienda demasiado */
-  margin: 0 auto;   /* lo centra en la página */
-  padding: 2rem;
+    #habilidades {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    }
+
+    #habilidades h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    }
+
+    #habilidades ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem; /* espacio entre items */
+    }
+
+    #habilidades li {
+    background: #f4f4f4;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    }
+#portafolio {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: var(--color-fondo);
 }
 
-#servicios h2 {
-  text-align: center; /* título sí centrado */
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.portafolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
-#servicios ul {
-  list-style: none; /* quitamos los puntos feos */
-  padding: 0;
+.portafolio-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-#servicios li {
-  margin: 1rem 0;
-  padding-left: 2rem;
-  position: relative;
-  font-size: 1.1rem;
-  line-height: 1.5;
+.portafolio-card:hover {
+    transform: translateY(-10px);
 }
 
-/* decoramos con un "check" bonito en vez de punto */
-#servicios li::before {
-  content: "✔";
-  color: #4CAF50; /* verde elegante */
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-#habilidades {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+.portafolio-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-#habilidades h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.portafolio-card h3 {
+    color: var(--color-primario);
 }
 
-#habilidades ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem; /* espacio entre items */
+.portafolio-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: bold;
 }
-
-#habilidades li {
-  background: #f4f4f4;
-  padding: 0.8rem 1.2rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: 500;
+.portafolio-card a:hover {
+    text-decoration: underline;
 }
