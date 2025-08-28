@@ -18,3 +18,10 @@ botonVolverArriba.addEventListener('click', function() {
         behavior: 'smooth' // Desplazamiento suave
     });
 });
+// Botón de ayuda que abre WhatsApp
+document.getElementById("ayuda-btn").addEventListener("click", () => {
+  const numero = "573058962619"; // 👉 reemplaza con tu número
+  const mensaje = encodeURIComponent("¡Hola! me gustaria saber precios sobre paginas web");
+  const url = `https://wa.me/${numero}?text=${mensaje}`;
+  window.open(url, "_blank"); // abre en una pestaña nueva
+});
