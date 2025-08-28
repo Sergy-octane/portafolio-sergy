@@ -21,7 +21,7 @@ botonVolverArriba.addEventListener('click', function() {
 // Botón de ayuda que abre WhatsApp
 document.getElementById("ayuda-btn").addEventListener("click", () => {
   const numero = "573058962619"; // 👉 reemplaza con tu número
-  const mensaje = encodeURIComponent("¡Hola! me gustaria saber precios sobre paginas web");
+  const mensaje = encodeURIComponent("¡Hola! me interesan tus servicios/Hello! I'm interested in your services.");
   const url = `https://wa.me/${numero}?text=${mensaje}`;
   window.open(url, "_blank"); // abre en una pestaña nueva
 });
