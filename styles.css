@@ -21,23 +21,33 @@
 }
 
     /* Encabezado */
-    header {
-        background-color: #000;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        display: flex;            /* flex para organizar h1 y nav */
-        flex-direction: column;   /* h1 arriba, nav abajo */
-        align-items: center; 
-    }
+header {
+  background: linear-gradient(270deg, #000000, #1a1a1a, #002b5c, #000000);
+  background-size: 600% 600%;
+  animation: gradientMove 15s ease infinite;
+  color: white;
+  padding: 10 px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
 
     header h1 {
-        font-size: 3rem;
+        font-size: 2.2 rem;
         text-align: center;
-        margin-top: 50px;
+        margin-top: 10px;
     }
 
     nav ul {
@@ -60,6 +70,7 @@
 
     /* Secciones */
     section {
+        scroll-margin-top: 180px; /* Ajusta según el alto del header */
         padding: 40px 20px;
         max-width: 900px;
         margin: auto;
@@ -73,22 +84,25 @@
 
     /* Galería */
     .galeria {
-        display: flex;
-        gap: 10px;
-        justify-content: center;
-    }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px; /* espacio entre imágenes */
+  justify-items: center; /* centra las imágenes */
+}
 
     .galeria img {
-        width: 45%;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
+  width: 100%; 
+  max-width: 350px; /* para que no sean gigantes */
+  border-radius: 8px;
+  object-fit: cover; 
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    .galeria img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-    }
+   .galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
 
     /* Footer */
     footer {
@@ -224,34 +238,40 @@
     left: 0;
     top: 0;
 }
-    #habilidades {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    }
+   #habilidades {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f9f9f9; /* un gris muy clarito para diferenciar del fondo */
+}
 
-    #habilidades h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    }
+   #habilidades h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #0D6EFD;
+}
 
     #habilidades ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem; /* espacio entre items */
-    }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
 
-    #habilidades li {
-    background: #f4f4f4;
-    padding: 0.8rem 1.2rem;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    }
+  #habilidades li {
+  background: #fff; /* caja blanca */
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra suave */
+  font-size: 1.1rem;
+  color: #444;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#habilidades li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
 #portafolio {
     padding: 50px 20px;
     text-align: center;
