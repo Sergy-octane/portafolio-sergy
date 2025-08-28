@@ -106,12 +106,24 @@ header {
 
     /* Footer */
     footer {
-        background-color: #000;
-        color: white;
-        text-align: center;
-        padding: 15px;
-        margin-top: 30px;
-    }
+  background: linear-gradient(270deg, #000000, #1a1a1a, #002b5c, #000000);;
+  background-size: 600% 600%;
+  animation: gradientMove 15s ease infinite;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* La animación puede ser la misma que usas en el header */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
     .foto-circular {
         width: 250px;        /* tamaño de la foto */
         height: 250px;       /* igual que el ancho para que sea círculo */
