@@ -26,7 +26,7 @@ header {
   background-size: 600% 600%;
   animation: gradientMove 15s ease infinite;
   color: white;
-  padding: 10 px 20px;
+  padding: 10px 20px;
   text-align: center;
   position: sticky;
   top: 0;
@@ -45,7 +45,7 @@ header {
 
 
     header h1 {
-        font-size: 2.2 rem;
+        font-size: 2.2rem;
         text-align: center;
         margin-top: 10px;
     }
@@ -322,7 +322,7 @@ header {
 .portafolio-card a {
     display: inline-block;
     margin-top: 10px;
-    color: var(--color-primario);
+    color: var(--color-fondo);
     text-decoration: none;
     font-weight: bold;
 }
@@ -363,3 +363,16 @@ header {
   background: #005fcc;
   transform: scale(1.05);
 }
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
